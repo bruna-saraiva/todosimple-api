@@ -1,6 +1,6 @@
 package com.brunamarcelly.todosimple.models;
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -51,6 +51,9 @@ public class User {
     private String password;
 
     // private List<Task> tasks = new ArrayList<>();
+    // tem que gerar um construtor vazio
+    public User() {
+    }
 
 
     public User(Long id, String username, String password) {
