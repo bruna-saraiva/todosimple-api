@@ -3,14 +3,12 @@ package com.brunamarcelly.todosimple.repositories;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.brunamarcelly.todosimple.models.Task;
 
 @Repository
-public interface TaskRepository extends JpaRepository<Task,Long> {
+public interface TaskRepository extends JpaRepository<Task, Long> {
     // Quero buscar uma lista de tasks de um usuario, ou seja temos que encontrar uma lista
     // a partir de um user_id
 

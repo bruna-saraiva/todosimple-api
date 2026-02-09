@@ -7,9 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.brunamarcelly.todosimple.models.User;
-import com.brunamarcelly.todosimple.repositories.TaskRepository;
 import com.brunamarcelly.todosimple.repositories.UserRepository;
-
 
 
 @Service
@@ -18,9 +16,6 @@ public class UserService {
 
     @Autowired // faz a criação do construtor, é melhor usar isso pois estamos usando uma interface e nao da para instanciar
     private UserRepository userRepository;
-
-    @Autowired
-    private TaskRepository taskRepository;
 
     // buscar um usuario
 
@@ -37,9 +32,9 @@ public class UserService {
     public User create(User obj){
         obj.setId(null);
         obj = this.userRepository.save(obj);
-        this.taskRepository.saveAll(obj.getTasks());
         return obj;
     }
+
     @Transactional
     public User update(User obj){
         User newObj = findById(obj.getId());
