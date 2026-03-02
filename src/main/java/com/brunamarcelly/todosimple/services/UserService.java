@@ -20,18 +20,17 @@ public class UserService {
     // buscar um usuario
 
     public User findById(Long id){
-        Optional<User> user = this.userRepository.findById(id);
+        Optional<User> user = this.userRepository.findById(id); // por que usa optional mesmo?
         return user.orElseThrow(() -> new RuntimeException(
             "Usuário não encontrado! Id:" + id + ", Tipo:" + User.class.getName()
-
         ));
         
     }
 
-    @Transactional
+    @Transactional 
     public User create(User obj){
-        obj.setId(null);
-        obj = this.userRepository.save(obj);
+        obj.setId(null); //todo por que precisa desse setId?
+        obj = this.userRepository.save(obj); //todo quais sao todos os passos que esse save faz para criar o user 
         return obj;
     }
 

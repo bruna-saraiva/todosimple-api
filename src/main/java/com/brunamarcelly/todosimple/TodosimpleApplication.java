@@ -1,5 +1,8 @@
 package com.brunamarcelly.todosimple;
 
+// depois que terminar esse projeto fazer o do nelio alves e depois que terminar o do nelio alves tentar refazer pensando na arquitetura
+// e sem auxilio, refazer para varios tipos de crud: cadastro de usuario, lojinhas etc
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
