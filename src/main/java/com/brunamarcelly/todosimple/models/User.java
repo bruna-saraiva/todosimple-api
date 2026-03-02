@@ -30,7 +30,7 @@ public class User {
     }
     public interface UpdateUser {
     
-        
+
     }
 
     // Atributos do usuário
