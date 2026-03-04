@@ -1,7 +1,6 @@
 package com.brunamarcelly.todosimple.controllers;
 
 import java.net.URI;
-import java.security.PublicKey;
 import java.util.List;
 
 import javax.validation.Valid;
